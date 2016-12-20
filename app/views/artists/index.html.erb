@@ -1,0 +1,23 @@
+
+   <div class="container">
+      <div class="row">
+      <% @artists.each do |artist| %>
+         <div class="col-xs-3">
+            <div class="thumbnail" id="box">
+               <img src=<%= artist.image_url %> 
+               
+               <div class="caption">
+                  <h4 class="text-center"><%= artist.name %></h4> 
+                  <!-- <p>
+                    <a href="#" class="btn btn-primary" role="button">Ver más</a> 
+                  </p> -->
+                  <div class="btn btn-primary btn-xs" id="boton">
+                     <h4>Ver más</h4>
+                  </div> 
+               </div>
+            </div>
+      <% end %>
+         </div>
+      </div>
+   </div>
+
