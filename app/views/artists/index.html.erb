@@ -1,20 +1,21 @@
 
    <div class="container">
-      <div class="row">
-      <% @artists.each do |artist| %>
-         <div class="col-xs-3">
-            <div class="thumbnail">
-               <%= image_tag artist.image_url , id:"index-images" %>
-               
-               <div class="caption">
-                  <h4 class="text-center"><%= artist.name %></h4> 
+         <div class="row">
+         <% @artists.each do |artist| %>
+            <div class="col-xs-3">
+               <div class="thumbnail">
+                  <%= image_tag artist.image_url , id:"index-images" %>
+                  
+                  <div class="caption">
+                     <h4 class="text-center"><%= artist.name %></h4> 
 
-                  <%= link_to "Ver más", artist , class:"btn btn-primary btn-block" %>
-      
+                     <%= link_to "Ver más", artist , class:"btn btn-primary btn-block" %>
+         
+                  </div>
                </div>
             </div>
+         <% end %>
          </div>
-      <% end %>
-      </div>
    </div>
+   
 

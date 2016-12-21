@@ -1,27 +1,27 @@
-<div class="container">
-   <div class="row">
-      <h1><%= @artist.name %></h1>
-      <h4><strong>Albums (<%= @artist.albums.count %>)</strong></h4>   
-   </div>
+<div class="container-fluid">
+   <div class="container">
+      <div class="row">
+         <h1><%= @artist.name %></h1>
+         <h4><strong>Albums (<%= @artist.albums.count %>)</strong></h4>   
+      </div>
 
-   <div class="row">
-      <div class="col-sm-9 col-offset-sm-3">
-         <% @artist.albums.each do |album| %>
-         <div class="col-sm-3" id="album-image">
-            <div class="thumbnail">
-               <%= image_tag album.image_url, id:"show-images" %>
-               <h4><%= album.name %></h4>
-               <h5><%= album.released_at %></h5>
+      <div class="row">
+         <div class="col-sm-8">
+            <% @artist.albums.each do |album| %>
+            <div class="col-sm-3" id="album-image">
+               <div class="thumbnail">
+                  <%= image_tag album.image_url, id:"show-images" %>
+                  <h4><%= album.name %></h4>
+                  <h5><%= album.released_at %></h5>
+               </div>
             </div>
+            <% end %>
          </div>
-         <% end %>
-      </div>
 
-      <div class="col-sm-3">
-         <div class="thumbnail">
-            <%= image_tag @artist.image_url, id:"big-show-image" %>
+         <div class="col-sm-4">
+            <%= image_tag @artist.image_url, id:"big-show-image", class:"img-rounded" %>
          </div>
-      </div>
 
-   </div>
+      </div>
+   </div>   
 </div>
