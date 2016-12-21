@@ -3,8 +3,8 @@
       <div class="row">
       <% @artists.each do |artist| %>
          <div class="col-xs-3">
-            <div class="thumbnail" id="index-images">
-               <img src=<%= artist.image_url %> 
+            <div class="thumbnail">
+               <%= image_tag artist.image_url , id:"index-images" %>
                
                <div class="caption">
                   <h4 class="text-center"><%= artist.name %></h4> 
@@ -13,8 +13,8 @@
       
                </div>
             </div>
-      <% end %>
          </div>
+      <% end %>
       </div>
    </div>
 

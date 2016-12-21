@@ -20,7 +20,7 @@
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
               <ul class="nav navbar-nav navbar-left">
                 <li><%= link_to "Artistas", artists_path %></li>
-                <li><a href="#">Mi Música</a></li>
+                <li><%= link_to "Mi Música", artists_path %></li>
               </ul>
 
               <ul class="nav navbar-nav navbar-right">
@@ -32,8 +32,8 @@
                 </li>
                </ul>
 
-            </div><!-- /.navbar-collapse -->
-          </div><!-- /.container-fluid -->
+            </div>
+          </div>
       </nav>
 
       <%= yield %>
