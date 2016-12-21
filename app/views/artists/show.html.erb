@@ -1,2 +1,27 @@
-<h1>Artists#show</h1>
-<p>Find me in app/views/artists/show.html.erb</p>
+<div class="container">
+   <div class="row">
+      <h1><%= @artist.name %></h1>
+      <h4><strong>Albums (<%= @artist.albums.count %>)</strong></h4>   
+   </div>
+
+   <div class="row">
+      <div class="col-sm-9 col-offset-sm-3">
+         <% @artist.albums.each do |album| %>
+         <div class="col-sm-3" id="ensayo">
+            <div class="thumbnail" id="show-images">
+               <img src="<%= album.image_url %>">
+               <h4><%= album.name %></h4>
+               <h5><%= album.released_at %></h5>
+            </div>
+         </div>
+         <% end %>
+      </div>
+
+      <div class="col-sm-3">
+         <div class="thumbnail">
+            <%= image_tag @artist.image_url, id:"big-show-image" %>
+         </div>
+      </div>
+
+   </div>
+</div>
